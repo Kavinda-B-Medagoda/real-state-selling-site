@@ -35,7 +35,11 @@ const HouseContextProvider = ({ children }) => {
   }, []);
 
   const handleClick = () => {
-    console.log("clicked");
+    const isDefault = (str) => {
+      return str.split(" ").includes("(any)");
+    };
+
+    console.log(isDefault(country));
   };
 
   return (
